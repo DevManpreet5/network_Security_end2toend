@@ -1,3 +1,8 @@
 data_ingestion:
-  raw_path: "data/raw"
-  dataset_url: ""
+  raw_zip_path: "artifact/download/zip/"
+  zip_name: "network.zip"
+  raw_csv_path: "artifact/download/csv/"
+  dataset_url: "https://www.kaggle.com/api/v1/datasets/download/chethuhn/network-intrusion-dataset"
+  raw_path: "artifact/data/raw"
+  file_name: "rawdata.csv"
+  processed_path: "artifact/data/processed/"
