@@ -40,13 +40,40 @@ class DataIngestionComponent:
         self.combined_df.to_csv(csv_path,index=False)
         print('csv saved successfully!')
     
-    
+    def split(self):
+        self.savecsv()
+        csv_path=os.path.join(self.config.raw_path,self.config.file_name)
+        df=pd.read_csv(csv_path)
+        X = df.drop(columns=['Label'])
+        y=df['Label']
+        X_build,X_eval,y_build,y_eval=train_test_split(X,y,test_size=self.config.evaluate_size,random_state=self.config.random_state,stratify=y)
+        X_train,X_test,y_train,y_test=train_test_split(X_build,y_build,test_size=self.config.test_size,random_state=self.config.random_state,stratify=y_build)
 
+        train_df = X_train.copy()
+        train_df['Label'] = y_train
+
+        test_df = X_test.copy()
+        test_df['Label'] = y_test
+
+        eval_df = X_eval.copy()
+        eval_df['Label'] = y_eval
+
+
+        os.makedirs(self.config.processed_path, exist_ok=True)
+
+
+        train_df.to_csv(os.path.join(self.config.processed_path, "train.csv"), index=False)
+        test_df.to_csv(os.path.join(self.config.processed_path, "test.csv"), index=False)
+        eval_df.to_csv(os.path.join(self.config.processed_path, "eval.csv"), index=False)
+
+        print("Datasets saved successfully in:", self.config.processed_path)
+
+        
 
         
         
     def run(self):
-        # self.savecsv()
+        self.split()
 
 
 
