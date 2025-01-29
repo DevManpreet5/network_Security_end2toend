@@ -68,10 +68,6 @@ class DataIngestionComponent:
 
         print("Datasets saved successfully in:", self.config.processed_path)
 
-        
-
-        
-        
     def run(self):
         self.split()
 
