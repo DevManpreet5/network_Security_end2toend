@@ -1,0 +1,3 @@
+data_ingestion:
+  raw_path: "data/raw"
+  dataset_url: ""
