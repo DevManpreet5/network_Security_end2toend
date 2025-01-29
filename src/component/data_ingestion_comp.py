@@ -19,5 +19,11 @@ class DataIngestionComponent:
     def unzip(self):
         unzip_command = f"unzip {self.download_path} -d {self.extract_path}"
         subprocess.run(unzip_command, shell=True, check=True)
+        
+
+    def run(self):
+        self.download()
+        self.unzip()
         print("Download and extraction completed successfully!")
+
 
