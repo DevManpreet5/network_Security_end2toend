@@ -1,4 +1,4 @@
 data_ingestion:
   test_size: 0.15
-  evaluate_size: 0.35
+  evaluate_size: 0.45
   random_state: 42
