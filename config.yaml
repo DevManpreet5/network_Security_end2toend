@@ -7,7 +7,8 @@ data_ingestion:
   file_name: "rawdata.csv"
   processed_path: "artifact/data/processed/"
 
-data-transform:
+data_transform:
   file_path: "artifact/data/processed/"
   transformed_path: "artifacts/data/transformed/"
-  model_path: "artifacts/models/transformed"
+  model_path: "artifacts/transformed/models"
+  target_col: "Label"

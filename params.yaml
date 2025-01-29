@@ -2,3 +2,6 @@ data_ingestion:
   test_size: 0.15
   evaluate_size: 0.45
   random_state: 42
+
+data_transform:
+  feature_threshold: 0.05

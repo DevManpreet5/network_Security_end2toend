@@ -1,5 +1,6 @@
 import yaml 
 from src.entity.data_ingestion_entity import DataIngestionConfig
+from src.entity.data_transform_entity import DataTransformConfig
 
 class ConfigurationManager:
     def __init__ (self,config_path='config.yaml',params_path='params.yaml'):
@@ -25,4 +26,17 @@ class ConfigurationManager:
             test_size=params['test_size'],
             evaluate_size=params['evaluate_size'],
             random_state=params['random_state']
+        )
+
+    def get_data_transform(self):
+        config=self.config['data_transform']
+        params=self.params['data_transform']
+
+        return DataTransformConfig(
+            file_path= config['file_path'],
+            transformed_path= config['transformed_path'],
+            model_path= config['model_path'],
+            target_col= config['target_col'],
+            feature_threshold = params['feature_threshold'],
+            features_pkl_name = config['features_pkl_name']
         )
