@@ -14,4 +14,7 @@ data_transform:
   features_pkl_name: "selected_features.pkl"
   target_col: "Label"
 
-mode_training:
+model_training:
+  transformed_path: "artifact/data/transformed/"
+  target_col: "Label"
+  model_path: "artifact/models/"
