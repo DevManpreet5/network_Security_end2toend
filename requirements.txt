@@ -4,3 +4,5 @@ ipykernel
 kagglehub
 pyyaml
 scikit-learn
+lightgbm
+shap
