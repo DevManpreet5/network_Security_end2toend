@@ -30,13 +30,11 @@ class ConfigurationManager:
 
     def get_data_transform(self):
         config=self.config['data_transform']
-        params=self.params['data_transform']
 
         return DataTransformConfig(
             file_path= config['file_path'],
             transformed_path= config['transformed_path'],
             model_path= config['model_path'],
             target_col= config['target_col'],
-            feature_threshold = params['feature_threshold'],
             features_pkl_name = config['features_pkl_name']
         )

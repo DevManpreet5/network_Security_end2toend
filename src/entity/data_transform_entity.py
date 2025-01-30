@@ -7,5 +7,4 @@ class DataTransformConfig:
     model_path: str
     target_col: str
     features_pkl_name: str
-    feature_threshold: float
 

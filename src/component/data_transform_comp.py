@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split, cross_val_score
 import numpy as np
 
 
-class DataIngestionComponent:
+class DataTransformComp:
     def __init__(self, config: DataTransformConfig):
         self.config = config
         train_path = os.path.join(self.config.file_path, "train.csv")
@@ -43,7 +43,7 @@ class DataIngestionComponent:
         le = LabelEncoder()
         self.train_df[self.config.target_col] = le.fit_transform(self.train_df[self.config.target_col])
         self.test_df[self.config.target_col] = le.transform(self.test_df[self.config.target_col])
-
+        os.makedirs(self.config.model_path,exist_ok=True)
         label_path = os.path.join(self.config.model_path, "label_encoder.joblib")
         joblib.dump(le, label_path)
 

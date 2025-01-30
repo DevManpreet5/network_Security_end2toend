@@ -9,8 +9,8 @@ data_ingestion:
 
 data_transform:
   file_path: "artifact/data/processed/"
-  transformed_path: "artifacts/data/transformed/"
-  model_path: "artifacts/transformed/models"
+  transformed_path: "artifact/data/transformed/"
+  model_path: "artifact/transformed/models"
   features_pkl_name: "selected_features.pkl"
   target_col: "Label"
 
