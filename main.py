@@ -1,5 +1,6 @@
 from src.pipeline.data_ingestion_pipeline import DataIngestionPipeline
 from src.pipeline.data_transform_pipeline import DataTransformPipeline
+from src.pipeline.model_training_pipeline import ModelTrainingPipeline
 import yaml
 import os
 
@@ -12,10 +13,13 @@ if __name__=="__main__":
     #pipelineING=DataIngestionPipeline()
     #pipelineING.run()
 
-    config = load_config('config.yaml')
-    train_csv_path = os.path.join(config['data_transform']['file_path'], "train.csv")
-    test_csv_path = os.path.join(config['data_transform']['file_path'], "test.csv")
-    pipeline = DataTransformPipeline()
-    pipeline.run(train_csv_path, test_csv_path)
+    # config = load_config('config.yaml')
+    # train_csv_path = os.path.join(config['data_transform']['file_path'], "train.csv")
+    # test_csv_path = os.path.join(config['data_transform']['file_path'], "test.csv")
+    # pipeline = DataTransformPipeline()
+    # pipeline.run(train_csv_path, test_csv_path)
+
+    pipeline=ModelTrainingPipeline()
+    pipeline.run()
 
 
