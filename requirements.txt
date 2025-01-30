@@ -5,4 +5,4 @@ kagglehub
 pyyaml
 scikit-learn
 lightgbm
-shap
+xgboost
