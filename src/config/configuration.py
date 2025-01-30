@@ -1,6 +1,7 @@
 import yaml 
 from src.entity.data_ingestion_entity import DataIngestionConfig
 from src.entity.data_transform_entity import DataTransformConfig
+from src.entity.model_training import ModelTrainingConfig
 
 class ConfigurationManager:
     def __init__ (self,config_path='config.yaml',params_path='params.yaml'):
@@ -37,4 +38,16 @@ class ConfigurationManager:
             model_path= config['model_path'],
             target_col= config['target_col'],
             features_pkl_name = config['features_pkl_name']
+        )
+
+    def get_model_training(self):
+        config=self.config['model_training']
+        params=self.params['model_training']
+
+        return ModelTrainingConfig(
+            transformed_path=config['transformed_path'],
+            target_col=config['target_col'],
+            model_path=config['model_path'],
+            test_size=params['test_size'],
+            random_state=params['random_state']
         )
