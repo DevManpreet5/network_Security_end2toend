@@ -1,4 +1,4 @@
-from src.entity.config_entity import Modelevaluating
+from src.entity.model_evaluate import Modelevaluating
 import mlflow 
 import os
 from dotenv import load_dotenv
