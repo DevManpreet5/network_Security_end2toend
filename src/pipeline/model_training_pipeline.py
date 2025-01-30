@@ -7,5 +7,5 @@ class ModelTrainingPipeline:
     
     def run(self):
         config=self.config_manager.get_model_training()
-        data_ingestion=ModelTrainingComp(config)
-        data_ingestion.run()
+        model_training=ModelTrainingComp(config)
+        model_training.startTraining()
