@@ -2,6 +2,7 @@ import yaml
 from src.entity.data_ingestion_entity import DataIngestionConfig
 from src.entity.data_transform_entity import DataTransformConfig
 from src.entity.model_training import ModelTrainingConfig
+from src.entity.model_evaluate import ModelevaluatingConfig
 
 class ConfigurationManager:
     def __init__ (self,config_path='config.yaml',params_path='params.yaml'):
@@ -50,4 +51,16 @@ class ConfigurationManager:
             model_path=config['model_path'],
             test_size=params['test_size'],
             random_state=params['random_state']
+        )
+    
+    def get_data_evaluating(self):
+        config = self.config["model_evaluating"]
+        return ModelevaluatingConfig(
+            test_dir= config["test_dir"],
+            model_path=config["model_path"],
+            model_name=config["model_name"],
+            metrics_file=config["metrics_file"],
+            tracking_uri=config["tracking_uri"]
+
+
         )
