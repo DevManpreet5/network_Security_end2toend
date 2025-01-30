@@ -70,8 +70,17 @@ class DataTransformer:
 
 
     def SaveTransformedData(self):
+        selected_features_path = os.path.join(self.config.model_path, "selected_features.joblib")
+    
+        if os.path.exists(selected_features_path):
+            best_features = joblib.load(selected_features_path)
+            best_features.append(self.config.target_col)
+            self.train_df = self.train_df[best_features]
+            self.test_df = self.test_df[best_features]
+    
         self.train_df.to_csv(os.path.join(self.config.transformed_path, "train_transformed.csv"), index=False)
         self.test_df.to_csv(os.path.join(self.config.transformed_path, "test_transformed.csv"), index=False)
+
 
     def FeatureSelectionBinarySearch(self):
         sample_df = self.train_df.sample(frac=0.1, random_state=42)
@@ -124,5 +133,5 @@ class DataTransformer:
         self.HandleInfinityNull()
         self.LabelEncode()
         self.ScaleAndImpute()
-        self.SaveTransformedData()
         self.FeatureSelectionBinarySearch()
+        self.SaveTransformedData()
