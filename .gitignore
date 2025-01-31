@@ -1,3 +1,5 @@
 .env
 networkenv/
-artifact/
+artifact/download/
+artifact/models/
+artifact/transformedmodels/

@@ -10,3 +10,4 @@ optuna
 evidently==0.4.10
 pydantic<2
 mlflow
+dvc-s3
