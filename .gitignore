@@ -1,4 +1,5 @@
 networkenv/
+airflow_env/
 artifact/download/
 artifact/models/
 artifact/transformedmodels/
