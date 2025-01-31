@@ -24,4 +24,5 @@ model_evaluating:
   model_path: "artifact/models"
   model_name: "best_model.pkl"
   metrics_file: "metrics.json"
-  tracking_uri: ""
+  tracking_uri: "https://dagshub.com/DevManpreet5/network_Security_end2toend.mlflow"
+  target_col: "Label"

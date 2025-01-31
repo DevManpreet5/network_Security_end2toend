@@ -6,3 +6,4 @@ class ModelevaluatingConfig:
   model_name: str
   metrics_file: str
   tracking_uri: str
+  target_col: str

@@ -1,4 +1,4 @@
-from src.entity.model_evaluate import Modelevaluating
+from src.entity.model_evaluate import ModelevaluatingConfig
 import mlflow 
 import os
 from dotenv import load_dotenv
@@ -10,7 +10,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score , 
 load_dotenv()
 
 class Modeltestingcomponent:
-    def __init__(self, config: Modelevaluating):
+    def __init__(self, config: ModelevaluatingConfig):
         self.config = config
         mlflow_tracking_uri = self.config.tracking_uri
         mlflow_tracking_username = os.getenv("MLFLOW_TRACKING_USERNAME")
@@ -22,8 +22,8 @@ class Modeltestingcomponent:
     
     def modeltest(self):
         data=pd.read_csv(self.config.test_dir)
-        X=data.drop(columns=["Class"])
-        y=data['Class']
+        X=data.drop(columns=[self.config.target_col])
+        y=data[self.config.target_col]
 
         mlflow.set_tracking_uri(self.config.tracking_uri)
         mlflow.set_experiment("evaluating wine model")

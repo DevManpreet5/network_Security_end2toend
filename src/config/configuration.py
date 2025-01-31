@@ -60,7 +60,8 @@ class ConfigurationManager:
             model_path=config["model_path"],
             model_name=config["model_name"],
             metrics_file=config["metrics_file"],
-            tracking_uri=config["tracking_uri"]
+            tracking_uri=config["tracking_uri"],
+            target_col=config["target_col"]
 
 
         )
