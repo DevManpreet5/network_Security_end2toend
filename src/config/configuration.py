@@ -53,7 +53,7 @@ class ConfigurationManager:
             random_state=params['random_state']
         )
     
-    def get_data_evaluating(self):
+    def get_model_evaluating(self):
         config = self.config["model_evaluating"]
         return ModelevaluatingConfig(
             test_dir= config["test_dir"],

@@ -1,5 +1,5 @@
 from src.config.configuration import ConfigurationManager
-from src.component.model_validation_comp import ModelEvaulatingComponent
+from src.component.model_evaluate_comp import ModelEvaulatingComponent
 
 class ModelEvaluatingPipeline:
     def __init__(self):
