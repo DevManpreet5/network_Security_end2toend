@@ -1,6 +1,7 @@
 from src.pipeline.data_ingestion_pipeline import DataIngestionPipeline
 from src.pipeline.data_transform_pipeline import DataTransformPipeline
 from src.pipeline.model_training_pipeline import ModelTrainingPipeline
+from src.pipeline.model_evaluate_pipeline import ModelEvaluatingPipeline
 import yaml
 import os
 
@@ -21,6 +22,9 @@ if __name__=="__main__":
 
     # pipeline=ModelTrainingPipeline()
     # pipeline.run()
+
+    pipeline=ModelEvaluatingPipeline()
+    pipeline.run()
 
 
 
