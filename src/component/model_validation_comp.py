@@ -9,7 +9,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score , 
 
 load_dotenv()
 
-class Modeltestingcomponent:
+class ModelEvaulatingComponent:
     def __init__(self, config: ModelevaluatingConfig):
         self.config = config
         mlflow_tracking_uri = self.config.tracking_uri

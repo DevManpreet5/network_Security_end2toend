@@ -19,7 +19,8 @@ if __name__=="__main__":
     # pipeline = DataTransformPipeline()
     # pipeline.run(train_csv_path, test_csv_path)
 
-    pipeline=ModelTrainingPipeline()
-    pipeline.run()
+    # pipeline=ModelTrainingPipeline()
+    # pipeline.run()
+
 
 
