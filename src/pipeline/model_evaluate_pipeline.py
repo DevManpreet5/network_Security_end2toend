@@ -6,6 +6,6 @@ class ModelEvaluatingPipeline:
         self.config_manager=ConfigurationManager()
     
     def run(self):
-        config=self.config_manager.get_model_training()
+        config=self.config_manager.get_model_evaluating()
         model_training=ModelEvaulatingComponent(config)
         model_training.run()
