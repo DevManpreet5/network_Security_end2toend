@@ -3,8 +3,10 @@ import mlflow
 import os
 from dotenv import load_dotenv
 import json
+from datetime import datetime
 import joblib
 import pandas as pd
+
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score , classification_report , confusion_matrix
 
 load_dotenv()
@@ -26,10 +28,10 @@ class ModelEvaulatingComponent:
         y=data[self.config.target_col]
 
         mlflow.set_tracking_uri(self.config.tracking_uri)
-        mlflow.set_experiment("evaluating wine model")
+        mlflow.set_experiment("evaluating network model")
 
-
-        with mlflow.start_run():
+        run_name = f"NetworkAnomalyDetection_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}"
+        with mlflow.start_run(run_name=run_name):
       
             print("testing started")
             model_path=os.path.join(self.config.model_path,self.config.model_name)
