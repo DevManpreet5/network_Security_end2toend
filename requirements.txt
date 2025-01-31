@@ -10,3 +10,5 @@ optuna
 mlflow
 apache-airflow
 dvc-s3
+prometheus_client
+flask
