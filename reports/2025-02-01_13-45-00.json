@@ -1,0 +1,682 @@
+{
+    "Max Packet Length": {
+        "algorithm": "ks",
+        "pvalue": 0.20309467110361845,
+        "statistic": 0.0041940011143241085,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Packet Length Variance": {
+        "algorithm": "ks",
+        "pvalue": 0.061931550633818166,
+        "statistic": 0.005171192883391906,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "POSSIBLE_DRIFT"
+    },
+    "Packet Length Std": {
+        "algorithm": "ks",
+        "pvalue": 0.09640270582121069,
+        "statistic": 0.004830488547678424,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "POSSIBLE_DRIFT"
+    },
+    "Destination Port": {
+        "algorithm": "ks",
+        "pvalue": 0.996055594649948,
+        "statistic": 0.0016059342166044877,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Avg Bwd Segment Size": {
+        "algorithm": "ks",
+        "pvalue": 0.28639962133850905,
+        "statistic": 0.0038637852127831884,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Total Length of Fwd Packets": {
+        "algorithm": "ks",
+        "pvalue": 0.03784547467740962,
+        "statistic": 0.005525720525696276,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "DRIFT"
+    },
+    "Average Packet Size": {
+        "algorithm": "ks",
+        "pvalue": 0.002004810186463546,
+        "statistic": 0.0072908381010303724,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "DRIFT"
+    },
+    "Bwd Packet Length Max": {
+        "algorithm": "ks",
+        "pvalue": 0.10223230999594057,
+        "statistic": 0.004783451530059213,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "POSSIBLE_DRIFT"
+    },
+    "Subflow Fwd Bytes": {
+        "algorithm": "ks",
+        "pvalue": 0.19788894367488985,
+        "statistic": 0.00421783799554587,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Total Length of Bwd Packets": {
+        "algorithm": "ks",
+        "pvalue": 0.3705937072903197,
+        "statistic": 0.003594115652747143,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd Packet Length Max": {
+        "algorithm": "ks",
+        "pvalue": 0.2216535602652181,
+        "statistic": 0.004112665890718681,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Subflow Bwd Bytes": {
+        "algorithm": "ks",
+        "pvalue": 0.4279929085791495,
+        "statistic": 0.003432369832103932,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd Packet Length Std": {
+        "algorithm": "ks",
+        "pvalue": 0.3794932266596125,
+        "statistic": 0.003568081901036524,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Init_Win_bytes_forward": {
+        "algorithm": "ks",
+        "pvalue": 0.14918084668580067,
+        "statistic": 0.004468746302961901,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "POSSIBLE_DRIFT"
+    },
+    "Packet Length Mean": {
+        "algorithm": "ks",
+        "pvalue": 0.03856179647849134,
+        "statistic": 0.005512640977872629,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "DRIFT"
+    },
+    "Fwd Packet Length Mean": {
+        "algorithm": "ks",
+        "pvalue": 0.3353796347751329,
+        "statistic": 0.003701274515321651,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd Packet Length Mean": {
+        "algorithm": "ks",
+        "pvalue": 0.09231224816827177,
+        "statistic": 0.00486492983439113,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "POSSIBLE_DRIFT"
+    },
+    "Init_Win_bytes_backward": {
+        "algorithm": "ks",
+        "pvalue": 0.9221355826464884,
+        "statistic": 0.0021589177923593272,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Total Fwd Packets": {
+        "algorithm": "ks",
+        "pvalue": 0.9805980124596403,
+        "statistic": 0.0018365741781446454,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Avg Fwd Segment Size": {
+        "algorithm": "ks",
+        "pvalue": 0.048591450110394674,
+        "statistic": 0.00534874900565474,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "DRIFT"
+    },
+    "Fwd Header Length.1": {
+        "algorithm": "ks",
+        "pvalue": 0.40047542409828674,
+        "statistic": 0.0035081669655226966,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd IAT Max": {
+        "algorithm": "ks",
+        "pvalue": 0.2646154117994638,
+        "statistic": 0.003942424800249977,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd Header Length": {
+        "algorithm": "ks",
+        "pvalue": 0.7391546761134331,
+        "statistic": 0.002678692699317309,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd IAT Std": {
+        "algorithm": "ks",
+        "pvalue": 0.4619927722347269,
+        "statistic": 0.003342407528816538,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd Packets/s": {
+        "algorithm": "ks",
+        "pvalue": 0.5628232433996339,
+        "statistic": 0.0030927323731994583,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd Header Length": {
+        "algorithm": "ks",
+        "pvalue": 0.63900444941938,
+        "statistic": 0.0029137078345601863,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Flow Bytes/s": {
+        "algorithm": "ks",
+        "pvalue": 0.24741925826680156,
+        "statistic": 0.004007903689630554,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Idle Mean": {
+        "algorithm": "ks",
+        "pvalue": 0.9905611501911964,
+        "statistic": 0.001720044477120819,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Subflow Bwd Packets": {
+        "algorithm": "ks",
+        "pvalue": 0.8097406484349041,
+        "statistic": 0.0025032346198110567,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Total Backward Packets": {
+        "algorithm": "ks",
+        "pvalue": 0.9170187861472913,
+        "statistic": 0.0021784807597455824,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "act_data_pkt_fwd": {
+        "algorithm": "ks",
+        "pvalue": 0.8421440600232475,
+        "statistic": 0.0024160737208773764,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "ACK Flag Count": {
+        "algorithm": "ks",
+        "pvalue": 0.999893980172466,
+        "statistic": 0.0013017613800718753,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Subflow Fwd Packets": {
+        "algorithm": "ks",
+        "pvalue": 0.9866799301953231,
+        "statistic": 0.0017727322936247347,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Label": {
+        "algorithm": "chi-square",
+        "pvalue": 0.0,
+        "statistic": Infinity,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "DRIFT"
+    }
+}
