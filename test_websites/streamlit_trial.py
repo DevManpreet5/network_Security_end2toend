@@ -71,25 +71,30 @@ import streamlit.components.v1 as components
 st.set_page_config(page_title="Data Drift Report", layout="wide")  
 
 st.title("📊 Weekly Data Drift Reports")
-st.sidebar.header("Select Report")
+
+
+#st.sidebar.image("https://via.placeholder.com/150", use_container_width=True) 
+st.sidebar.markdown("## Reports Dashboard 📈")  
 
 REPORTS_DIR = "reports"
 
 if not os.path.exists(REPORTS_DIR):
-    st.error("No reports found! Generate some first.")
+    st.sidebar.error("No reports found! Generate some first.")
     st.stop()
-
-report_files = sorted([f for f in os.listdir(REPORTS_DIR) if f.endswith(".html")])
-report_names = [os.path.splitext(f)[0] for f in report_files]  
+report_files = sorted([f for f in os.listdir(REPORTS_DIR) if f.endswith(".html")], reverse=True)  
+report_names = [os.path.splitext(f)[0] for f in report_files]
 
 if not report_files:
-    st.error("No reports available! Generate reports to see them here.")
+    st.sidebar.error("No reports available! Generate reports to see them here.")
     st.stop()
 
-selected_name = st.sidebar.selectbox("Choose a report:", report_names)
+st.sidebar.markdown(f"📂 **Total Reports:** {len(report_files)}")
+st.sidebar.markdown(f"🕒 **Latest Report:** {report_names[0]}")
+if st.sidebar.button("🔄 Refresh Reports"):
+    st.rerun()
+selected_name = st.sidebar.selectbox("📜 Choose a Report:", report_names)
 selected_report = selected_name + ".html"
-
-st.header(selected_name) 
+st.header(f"📌 {selected_name}")  
 
 report_path = os.path.join(REPORTS_DIR, selected_report)
 if os.path.exists(report_path):
@@ -97,4 +102,4 @@ if os.path.exists(report_path):
         report_html = f.read()
     components.html(report_html, height=800, scrolling=True)
 else:
-    st.error("Selected report not found! Try another one.")
+    st.error("❌ Selected report not found! Try another one.")
