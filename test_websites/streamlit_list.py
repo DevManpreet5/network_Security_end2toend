@@ -24,10 +24,7 @@ if json_files:
     st.sidebar.markdown(f"🕒 **Latest Report:** {json_files[0].replace('.json', '')}")
 else:
     st.sidebar.warning("No reports available! Generate some reports first.")
-
-if st.sidebar.button("🔄 Refresh Reports"):
-    st.rerun()
-
+    
 if json_files:
     selected_json_file = st.sidebar.selectbox("Select Drift Report:", [f.replace('.json', '') for f in json_files], index=0)
     json_path = os.path.join(REPORTS_DIR, selected_json_file + ".json")

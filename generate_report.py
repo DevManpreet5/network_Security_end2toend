@@ -23,8 +23,8 @@ columns_to_keep = [
 def load_and_sample_data(sample_fraction=0.1):
     reference = pd.read_csv('artifact/data/processed/train.csv')
     current = pd.read_csv('artifact/data/processed/eval.csv')
-    reference = reference[columns_to_keep].sample(frac=sample_fraction, random_state=42)
-    current = current[columns_to_keep].sample(frac=sample_fraction, random_state=42)
+    reference = reference.sample(frac=sample_fraction, random_state=42)
+    current = current.sample(frac=sample_fraction, random_state=42)
     reference.replace([np.inf, -np.inf], 0, inplace=True)
     reference.fillna(0, inplace=True)
     current.replace([np.inf, -np.inf], 0, inplace=True)

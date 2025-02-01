@@ -1,0 +1,1582 @@
+{
+    "Destination Port": {
+        "algorithm": "ks",
+        "pvalue": 0.8445858439281712,
+        "statistic": 0.002409248853279533,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Flow Duration": {
+        "algorithm": "ks",
+        "pvalue": 0.12491509297287962,
+        "statistic": 0.004619282353764187,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "POSSIBLE_DRIFT"
+    },
+    "Total Fwd Packets": {
+        "algorithm": "ks",
+        "pvalue": 0.9737427965206258,
+        "statistic": 0.001893635744662614,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Total Backward Packets": {
+        "algorithm": "ks",
+        "pvalue": 0.996914017283984,
+        "statistic": 0.0015778919365716515,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Total Length of Fwd Packets": {
+        "algorithm": "ks",
+        "pvalue": 0.1697981579211567,
+        "statistic": 0.004355634582191237,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Total Length of Bwd Packets": {
+        "algorithm": "ks",
+        "pvalue": 0.36710079904821546,
+        "statistic": 0.003604441549112769,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd Packet Length Max": {
+        "algorithm": "ks",
+        "pvalue": 0.028163453610060896,
+        "statistic": 0.005727895193663124,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "DRIFT"
+    },
+    "Fwd Packet Length Min": {
+        "algorithm": "ks",
+        "pvalue": 0.24391613976546334,
+        "statistic": 0.004021652371199225,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd Packet Length Mean": {
+        "algorithm": "ks",
+        "pvalue": 0.05766106157346451,
+        "statistic": 0.00522411602379369,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "POSSIBLE_DRIFT"
+    },
+    "Fwd Packet Length Std": {
+        "algorithm": "ks",
+        "pvalue": 0.5019994709631854,
+        "statistic": 0.0032407843836139705,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd Packet Length Max": {
+        "algorithm": "ks",
+        "pvalue": 0.11280352091480983,
+        "statistic": 0.004703558681188769,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "POSSIBLE_DRIFT"
+    },
+    "Bwd Packet Length Min": {
+        "algorithm": "ks",
+        "pvalue": 0.7481366682491754,
+        "statistic": 0.002657085848669749,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd Packet Length Mean": {
+        "algorithm": "ks",
+        "pvalue": 0.05895336270878215,
+        "statistic": 0.005207755763047106,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "POSSIBLE_DRIFT"
+    },
+    "Bwd Packet Length Std": {
+        "algorithm": "ks",
+        "pvalue": 0.5978806126176611,
+        "statistic": 0.003009792059091021,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Flow Bytes/s": {
+        "algorithm": "ks",
+        "pvalue": 0.1914634646023221,
+        "statistic": 0.004247939344854013,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Flow Packets/s": {
+        "algorithm": "ks",
+        "pvalue": 0.22102824501603058,
+        "statistic": 0.00411532006192028,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Flow IAT Mean": {
+        "algorithm": "ks",
+        "pvalue": 0.322187278677872,
+        "statistic": 0.0037433411979912457,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Flow IAT Std": {
+        "algorithm": "ks",
+        "pvalue": 0.7247405543772992,
+        "statistic": 0.002713077750321591,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Flow IAT Max": {
+        "algorithm": "ks",
+        "pvalue": 0.3948518306317045,
+        "statistic": 0.003524033206249,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Flow IAT Min": {
+        "algorithm": "ks",
+        "pvalue": 0.6999323761841286,
+        "statistic": 0.0027716146143785814,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd IAT Total": {
+        "algorithm": "ks",
+        "pvalue": 0.6302577869119992,
+        "statistic": 0.002934080821564211,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd IAT Mean": {
+        "algorithm": "ks",
+        "pvalue": 0.831272993332613,
+        "statistic": 0.002445980795982017,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd IAT Std": {
+        "algorithm": "ks",
+        "pvalue": 0.9394071027835956,
+        "statistic": 0.0020870638024069743,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd IAT Max": {
+        "algorithm": "ks",
+        "pvalue": 0.4888172047113918,
+        "statistic": 0.0032738279638282464,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd IAT Min": {
+        "algorithm": "ks",
+        "pvalue": 0.6379473067799338,
+        "statistic": 0.0029161691552472835,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd IAT Total": {
+        "algorithm": "ks",
+        "pvalue": 0.8479217551950315,
+        "statistic": 0.0023998563035757536,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd IAT Mean": {
+        "algorithm": "ks",
+        "pvalue": 0.8083753895522432,
+        "statistic": 0.0025067880877835957,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd IAT Std": {
+        "algorithm": "ks",
+        "pvalue": 0.7176950516523868,
+        "statistic": 0.0027297745948331453,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd IAT Max": {
+        "algorithm": "ks",
+        "pvalue": 0.6880352475936886,
+        "statistic": 0.0027994797044738062,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd IAT Min": {
+        "algorithm": "ks",
+        "pvalue": 0.959750970585492,
+        "statistic": 0.001984854749934928,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd PSH Flags": {
+        "algorithm": "ks",
+        "pvalue": 1.0,
+        "statistic": 5.781149460359902e-05,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd PSH Flags": {
+        "algorithm": "ks",
+        "pvalue": 1.0,
+        "statistic": 0,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd URG Flags": {
+        "algorithm": "ks",
+        "pvalue": 0.9999999999999964,
+        "statistic": 0.0007254207062272755,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd URG Flags": {
+        "algorithm": "ks",
+        "pvalue": 1.0,
+        "statistic": 0,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd Header Length": {
+        "algorithm": "ks",
+        "pvalue": 0.9571180093826142,
+        "statistic": 0.0019996326991995605,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd Header Length": {
+        "algorithm": "ks",
+        "pvalue": 0.2022281244897215,
+        "statistic": 0.004197936012259484,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd Packets/s": {
+        "algorithm": "ks",
+        "pvalue": 0.15740363183402573,
+        "statistic": 0.004422223355647348,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd Packets/s": {
+        "algorithm": "ks",
+        "pvalue": 0.49514328938758023,
+        "statistic": 0.0032579204361261604,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Min Packet Length": {
+        "algorithm": "ks",
+        "pvalue": 0.2897654256534763,
+        "statistic": 0.003852021568671038,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Max Packet Length": {
+        "algorithm": "ks",
+        "pvalue": 0.12502116665233054,
+        "statistic": 0.004618574424498756,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "POSSIBLE_DRIFT"
+    },
+    "Packet Length Mean": {
+        "algorithm": "ks",
+        "pvalue": 0.05096345645466194,
+        "statistic": 0.005314332396215038,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "POSSIBLE_DRIFT"
+    },
+    "Packet Length Std": {
+        "algorithm": "ks",
+        "pvalue": 0.22883762514445471,
+        "statistic": 0.004082572608980428,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Packet Length Variance": {
+        "algorithm": "ks",
+        "pvalue": 0.17684436385253077,
+        "statistic": 0.004319480419867905,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "FIN Flag Count": {
+        "algorithm": "ks",
+        "pvalue": 0.9991429940561607,
+        "statistic": 0.0014528607370836166,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "SYN Flag Count": {
+        "algorithm": "ks",
+        "pvalue": 1.0,
+        "statistic": 0.00045619355749193513,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "RST Flag Count": {
+        "algorithm": "ks",
+        "pvalue": 1.0,
+        "statistic": 2.2375583289546697e-05,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "PSH Flag Count": {
+        "algorithm": "ks",
+        "pvalue": 1.0,
+        "statistic": 6.414477431626597e-05,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "ACK Flag Count": {
+        "algorithm": "ks",
+        "pvalue": 0.9999999948869445,
+        "statistic": 0.0009390510269582375,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "URG Flag Count": {
+        "algorithm": "ks",
+        "pvalue": 0.9998702756618948,
+        "statistic": 0.0013142749522693231,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "CWE Flag Count": {
+        "algorithm": "ks",
+        "pvalue": 1.0,
+        "statistic": 0,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "ECE Flag Count": {
+        "algorithm": "ks",
+        "pvalue": 1.0,
+        "statistic": 0.0005102681655466679,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Down/Up Ratio": {
+        "algorithm": "ks",
+        "pvalue": 0.37218649688988914,
+        "statistic": 0.0035894275047855806,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Average Packet Size": {
+        "algorithm": "ks",
+        "pvalue": 0.008802249943434932,
+        "statistic": 0.006462509073839162,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "DRIFT"
+    },
+    "Avg Fwd Segment Size": {
+        "algorithm": "ks",
+        "pvalue": 0.09821818030167329,
+        "statistic": 0.004815591957678778,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "POSSIBLE_DRIFT"
+    },
+    "Avg Bwd Segment Size": {
+        "algorithm": "ks",
+        "pvalue": 0.17591773573618208,
+        "statistic": 0.004324169338994266,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd Header Length.1": {
+        "algorithm": "ks",
+        "pvalue": 0.8987530837034399,
+        "statistic": 0.0022436155909948408,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd Avg Bytes/Bulk": {
+        "algorithm": "ks",
+        "pvalue": 1.0,
+        "statistic": 0,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd Avg Packets/Bulk": {
+        "algorithm": "ks",
+        "pvalue": 1.0,
+        "statistic": 0,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Fwd Avg Bulk Rate": {
+        "algorithm": "ks",
+        "pvalue": 1.0,
+        "statistic": 0,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd Avg Bytes/Bulk": {
+        "algorithm": "ks",
+        "pvalue": 1.0,
+        "statistic": 0,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd Avg Packets/Bulk": {
+        "algorithm": "ks",
+        "pvalue": 1.0,
+        "statistic": 0,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Bwd Avg Bulk Rate": {
+        "algorithm": "ks",
+        "pvalue": 1.0,
+        "statistic": 0,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Subflow Fwd Packets": {
+        "algorithm": "ks",
+        "pvalue": 0.8645958570725771,
+        "statistic": 0.002351589100175966,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Subflow Fwd Bytes": {
+        "algorithm": "ks",
+        "pvalue": 0.08811644382653239,
+        "statistic": 0.004901611058179434,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "POSSIBLE_DRIFT"
+    },
+    "Subflow Bwd Packets": {
+        "algorithm": "ks",
+        "pvalue": 0.99564211130574,
+        "statistic": 0.001617780375347655,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Subflow Bwd Bytes": {
+        "algorithm": "ks",
+        "pvalue": 0.49812240844112354,
+        "statistic": 0.003250461493120471,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Init_Win_bytes_forward": {
+        "algorithm": "ks",
+        "pvalue": 0.27806399253446323,
+        "statistic": 0.003893349712765559,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Init_Win_bytes_backward": {
+        "algorithm": "ks",
+        "pvalue": 0.9953830342008247,
+        "statistic": 0.0016247697976448094,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "act_data_pkt_fwd": {
+        "algorithm": "ks",
+        "pvalue": 0.9986290952100789,
+        "statistic": 0.0014950414928198708,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "min_seg_size_forward": {
+        "algorithm": "ks",
+        "pvalue": 0.9999864702492824,
+        "statistic": 0.001192041182670578,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Active Mean": {
+        "algorithm": "ks",
+        "pvalue": 0.9858224420827195,
+        "statistic": 0.0017828356792919386,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Active Std": {
+        "algorithm": "ks",
+        "pvalue": 0.9998452153645059,
+        "statistic": 0.001325538703644713,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Active Max": {
+        "algorithm": "ks",
+        "pvalue": 0.8065693987031016,
+        "statistic": 0.0025114760577841233,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Active Min": {
+        "algorithm": "ks",
+        "pvalue": 0.7943690491347821,
+        "statistic": 0.002542792228897639,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Idle Mean": {
+        "algorithm": "ks",
+        "pvalue": 0.9739410949879719,
+        "statistic": 0.001892136007132228,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Idle Std": {
+        "algorithm": "ks",
+        "pvalue": 0.969929786495869,
+        "statistic": 0.0019211218962504883,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Idle Max": {
+        "algorithm": "ks",
+        "pvalue": 0.9821483862506546,
+        "statistic": 0.0018218064913035903,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Idle Min": {
+        "algorithm": "ks",
+        "pvalue": 0.9856036699822633,
+        "statistic": 0.0017853436257878608,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "NO_DRIFT"
+    },
+    "Label": {
+        "algorithm": "chi-square",
+        "pvalue": 0.0,
+        "statistic": Infinity,
+        "thresholds": {
+            "NO_DRIFT": [
+                0.15,
+                1
+            ],
+            "POSSIBLE_DRIFT": [
+                0.05,
+                0.15
+            ],
+            "DRIFT": [
+                0,
+                0.05
+            ]
+        },
+        "drift_category": "DRIFT"
+    }
+}
