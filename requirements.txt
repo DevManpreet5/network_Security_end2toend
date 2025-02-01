@@ -13,3 +13,4 @@ dvc-s3
 prometheus_client
 flask
 streamlit
+whylogs
