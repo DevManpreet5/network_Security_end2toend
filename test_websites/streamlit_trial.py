@@ -79,7 +79,7 @@ if not os.path.exists(REPORTS_DIR):
     st.error("No reports found! Generate some first.")
     st.stop()
 
-report_files = [f for f in os.listdir(REPORTS_DIR) if f.endswith(".html")]
+report_files = sorted([f for f in os.listdir(REPORTS_DIR) if f.endswith(".html")])
 report_names = [os.path.splitext(f)[0] for f in report_files]  
 
 if not report_files:
