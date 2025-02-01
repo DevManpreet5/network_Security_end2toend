@@ -100,6 +100,6 @@ report_path = os.path.join(REPORTS_DIR, selected_report)
 if os.path.exists(report_path):
     with open(report_path, "r", encoding="utf-8") as f:
         report_html = f.read()
-    components.html(report_html, height=800, scrolling=True)
+    components.html(report_html, height=2000, scrolling=False ,width=1500)
 else:
     st.error("❌ Selected report not found! Try another one.")
