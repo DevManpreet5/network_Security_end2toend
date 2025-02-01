@@ -1,13 +1,10 @@
-import streamlit as st
 import os
-import streamlit.components.v1 as components  
 import pandas as pd
 import whylogs
 import numpy as np
-import os
+from datetime import datetime
 from whylogs.viz import NotebookProfileVisualizer
-st.set_page_config(page_title="Data Drift Report", layout="wide")  
-st.title("📊 Weekly Data Drift Report") 
+
 columns_to_keep = [
     "Max Packet Length", "Packet Length Variance", "Packet Length Std", "Destination Port",
     "Avg Bwd Segment Size", "Total Length of Fwd Packets", "Average Packet Size",
@@ -21,43 +18,38 @@ columns_to_keep = [
     "Subflow Fwd Packets", "Label"
 ]
 
-def load_and_clean_data():
+def load_and_sample_data(sample_fraction=0.1):
     reference = pd.read_csv('artifact/data/processed/train.csv')
     current = pd.read_csv('artifact/data/processed/eval.csv')
-
-    reference = reference[columns_to_keep]
-    current = current[columns_to_keep]
-    
+    reference = reference[columns_to_keep].sample(frac=sample_fraction, random_state=42)
+    current = current[columns_to_keep].sample(frac=sample_fraction, random_state=42)
     reference.replace([np.inf, -np.inf], 0, inplace=True)
     reference.fillna(0, inplace=True)
-    
+
     current.replace([np.inf, -np.inf], 0, inplace=True)
     current.fillna(0, inplace=True)
 
     return reference, current
 
-def generate_drift_report(reference, current):
-    
+def generate_drift_report(reference, current, save_path):
     reference_profile = whylogs.log(reference)
     current_profile = whylogs.log(current)
+    
     reference_profile_view = reference_profile.view()
     current_profile_view = current_profile.view()
+    
     visualization = NotebookProfileVisualizer()
-    path=os.path.join(os.getcwd(),"templates")
     visualization.set_profiles(target_profile_view=current_profile_view, reference_profile_view=reference_profile_view)
-    visualization.write(
-    rendered_html=visualization.summary_drift_report(),
-    html_file_name=path + "/datadrift",
-)
-path=os.path.join(os.getcwd(),"templates")
-html_file_name=os.path.join(path,'datadrift.html')
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    visualization.write(rendered_html=visualization.summary_drift_report(), html_file_name=save_path + f'/{timestamp}')
 
-REPORT_PATH = html_file_name
-reference, current = load_and_clean_data()
-generate_drift_report(reference, current)  
-if os.path.exists(REPORT_PATH):  
-    with open(REPORT_PATH, "r", encoding="utf-8") as f:  
-        report_html = f.read()  
-    components.html(report_html, height=800, scrolling=True)  
-else:  
-    st.error("No Data Drift Report Found! 🚨 Run the script to generate one.")  
+def main():
+    save_path = os.path.join(os.getcwd(), "reports")
+    os.makedirs(save_path, exist_ok=True)  
+
+    for i in range(4):  
+        reference, current = load_and_sample_data()
+        generate_drift_report(reference, current, save_path)
+
+if __name__ == "__main__":
+    main()
