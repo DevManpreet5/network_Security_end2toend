@@ -1,105 +1,73 @@
-# import streamlit as st
-# import os
-# import streamlit.components.v1 as components  
-# import pandas as pd
-# import whylogs
-# import numpy as np
-# import os
-# from whylogs.viz import NotebookProfileVisualizer
-# st.set_page_config(page_title="Data Drift Report", layout="wide")  
-# st.title("📊 Weekly Data Drift Report") 
-# columns_to_keep = [
-#     "Max Packet Length", "Packet Length Variance", "Packet Length Std", "Destination Port",
-#     "Avg Bwd Segment Size", "Total Length of Fwd Packets", "Average Packet Size",
-#     "Bwd Packet Length Max", "Subflow Fwd Bytes", "Total Length of Bwd Packets",
-#     "Fwd Packet Length Max", "Subflow Bwd Bytes", "Bwd Packet Length Std",
-#     "Init_Win_bytes_forward", "Packet Length Mean", "Fwd Packet Length Mean",
-#     "Bwd Packet Length Mean", "Init_Win_bytes_backward", "Total Fwd Packets",
-#     "Avg Fwd Segment Size", "Fwd Header Length.1", "Fwd IAT Max", "Bwd Header Length",
-#     "Fwd IAT Std", "Bwd Packets/s", "Fwd Header Length", "Flow Bytes/s", "Idle Mean",
-#     "Subflow Bwd Packets", "Total Backward Packets", "act_data_pkt_fwd", "ACK Flag Count",
-#     "Subflow Fwd Packets", "Label"
-# ]
-
-# def load_and_clean_data():
-#     reference = pd.read_csv('artifact/data/processed/train.csv')
-#     current = pd.read_csv('artifact/data/processed/eval.csv')
-
-#     reference = reference[columns_to_keep]
-#     current = current[columns_to_keep]
-    
-#     reference.replace([np.inf, -np.inf], 0, inplace=True)
-#     reference.fillna(0, inplace=True)
-    
-#     current.replace([np.inf, -np.inf], 0, inplace=True)
-#     current.fillna(0, inplace=True)
-
-#     return reference, current
-
-# def generate_drift_report(reference, current):
-    
-#     reference_profile = whylogs.log(reference)
-#     current_profile = whylogs.log(current)
-#     reference_profile_view = reference_profile.view()
-#     current_profile_view = current_profile.view()
-#     visualization = NotebookProfileVisualizer()
-#     path=os.path.join(os.getcwd(),"templates")
-#     visualization.set_profiles(target_profile_view=current_profile_view, reference_profile_view=reference_profile_view)
-#     visualization.write(
-#     rendered_html=visualization.summary_drift_report(),
-#     html_file_name=path + "/datadrift",
-# )
-# path=os.path.join(os.getcwd(),"templates")
-# html_file_name=os.path.join(path,'datadrift.html')
-
-# REPORT_PATH = html_file_name
-# reference, current = load_and_clean_data()
-# generate_drift_report(reference, current)  
-# if os.path.exists(REPORT_PATH):  
-#     with open(REPORT_PATH, "r", encoding="utf-8") as f:  
-#         report_html = f.read()  
-#     components.html(report_html, height=800, scrolling=True)  
-# else:  
-#     st.error("No Data Drift Report Found! 🚨 Run the script to generate one.")  
-
-
-
 import streamlit as st
 import os
-import streamlit.components.v1 as components  
+import json
+import pandas as pd
+import plotly.express as px
+import streamlit.components.v1 as components
 
-st.set_page_config(page_title="Data Drift Report", layout="wide")  
+def load_drift_scores(json_filepath):
+    with open(json_filepath, 'r') as json_file:
+        scores = json.load(json_file)
+    return scores
 
-st.title("📊 Weekly Data Drift Reports")
+st.set_page_config(page_title="Data Drift Dashboard", layout="wide")
 
-
-#st.sidebar.image("https://via.placeholder.com/150", use_container_width=True) 
-st.sidebar.markdown("## Reports Dashboard 📈")  
+st.sidebar.header("🔍 Filters & Reports")
 
 REPORTS_DIR = "reports"
+os.makedirs(REPORTS_DIR, exist_ok=True)
 
-if not os.path.exists(REPORTS_DIR):
-    st.sidebar.error("No reports found! Generate some first.")
+report_folders = sorted(
+    [f for f in os.listdir(REPORTS_DIR) if os.path.isdir(os.path.join(REPORTS_DIR, f))], 
+    reverse=True
+)
+
+st.sidebar.markdown(f"📂 **Total Reports:** {len(report_folders)}")
+if not report_folders:
+    st.sidebar.warning("No reports available! Generate some reports first.")
     st.stop()
-report_files = sorted([f for f in os.listdir(REPORTS_DIR) if f.endswith(".html")], reverse=True)  
-report_names = [os.path.splitext(f)[0] for f in report_files]
 
-if not report_files:
-    st.sidebar.error("No reports available! Generate reports to see them here.")
-    st.stop()
-
-st.sidebar.markdown(f"📂 **Total Reports:** {len(report_files)}")
-st.sidebar.markdown(f"🕒 **Latest Report:** {report_names[0]}")
-if st.sidebar.button("🔄 Refresh Reports"):
-    st.rerun()
-selected_name = st.sidebar.selectbox("📜 Choose a Report:", report_names)
-selected_report = selected_name + ".html"
-st.header(f"📌 {selected_name}")  
-
+selected_report = st.sidebar.selectbox("Select Drift Report:", report_folders, index=0)
 report_path = os.path.join(REPORTS_DIR, selected_report)
-if os.path.exists(report_path):
-    with open(report_path, "r", encoding="utf-8") as f:
-        report_html = f.read()
-    components.html(report_html, height=2000, scrolling=False)
+
+json_file = f"{selected_report}.json"
+html_file = f"{selected_report}.html"
+json_path = os.path.join(report_path, json_file)
+html_path = os.path.join(report_path, html_file)
+
+if os.path.exists(json_path):
+    drift_results = load_drift_scores(json_path)
+    df = pd.DataFrame.from_dict(drift_results, orient="index")
+    df.index.name = "Feature"
+    df.reset_index(inplace=True)
+
+    color_map = {"NO_DRIFT": "green", "POSSIBLE_DRIFT": "orange", "DRIFT": "red"}
+    df["color"] = df["drift_category"].map(color_map)
+
+    st.title("🚀 Data Drift Dashboard")
+    st.header(f"📝 Report: {selected_report}")
+
+    drift_type = st.sidebar.radio("Filter by Drift Type:", ["ALL", "NO_DRIFT", "POSSIBLE_DRIFT", "DRIFT"], index=0)
+    df_filtered = df if drift_type == "ALL" else df[df["drift_category"] == drift_type]
+
+    st.subheader("📊 Drift Summary")
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Total Features Analyzed", len(df))
+    col2.metric("Drift Detected", df[df["drift_category"] == "DRIFT"].shape[0], "⚠️")
+    col3.metric("Possible Drift", df[df["drift_category"] == "POSSIBLE_DRIFT"].shape[0], "🔍")
+
+    fig = px.bar(df_filtered, x="Feature", y="pvalue", color="drift_category", title="Feature Drift Analysis",
+                 color_discrete_map=color_map, height=400)
+    st.plotly_chart(fig, use_container_width=True)
+
+    st.subheader("📋 Feature Drift Details")
+    st.dataframe(df_filtered.style.applymap(lambda x: f"background-color: {df.loc[df.index[df['drift_category'] == x], 'color'].values[0]}" if x in color_map else "", subset=['drift_category']))
+
+    if os.path.exists(html_path):
+        with open(html_path, "r") as file:
+            html_content = file.read()
+            st.components.v1.html(html_content, height=800, scrolling=True)
+    else:
+        st.warning("No HTML report found for this drift scores file.")
 else:
-    st.error("❌ Selected report not found! Try another one.")
+    st.sidebar.error("No JSON report found in the selected folder!")
