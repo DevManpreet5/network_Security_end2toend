@@ -172,7 +172,7 @@ os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 os.makedirs(EXTRACT_PATH, exist_ok=True)
 
 def download_dataset():
-    dataset_url = "https://www.kaggle.com/datasets/uciml/iris/download?datasetVersionNumber=1"
+    dataset_url = "https://www.kaggle.com/api/v1/datasets/download/uciml/iris"
     curl_command = f"curl -L -o {ZIP_PATH} {dataset_url}"
     subprocess.run(curl_command, shell=True, check=True)
     print(f"✅ Dataset downloaded successfully! {ZIP_PATH}")
