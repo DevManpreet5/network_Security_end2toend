@@ -3,7 +3,7 @@ import os
 import subprocess
 from sklearn.model_selection import train_test_split
 import pandas as pd
-
+import zipfile
 
 class DataIngestionComponent:
     def __init__(self,config:DataIngestionConfig):
@@ -18,11 +18,19 @@ class DataIngestionComponent:
         curl_command = f"curl -L -o {self.download_path} {self.config.dataset_url}"
         subprocess.run(curl_command, shell=True, check=True)
     
+   
+
     def unzip(self):
         self.download()
-        unzip_command = f"unzip {self.download_path} -d {self.extract_path}"
-        subprocess.run(unzip_command, shell=True, check=True)
+    
+        if not os.path.exists(self.download_path):
+            raise FileNotFoundError(f"Zip file not found: {self.download_path}")
+
+        with zipfile.ZipFile(self.download_path, 'r') as zip_ref:
+            zip_ref.extractall(self.extract_path)
+
         print("Download and extraction completed successfully!")
+
 
     def combine(self):
         self.unzip()

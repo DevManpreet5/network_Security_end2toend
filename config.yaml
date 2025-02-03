@@ -1,11 +1,11 @@
 data_ingestion:
-  raw_zip_path: "artifact/download/zip/"
+  raw_zip_path: "/usr/local/airflow/include/artifact/download/zip/"
   zip_name: "network.zip"
-  raw_csv_path: "artifact/download/csv/"
+  raw_csv_path: "/usr/local/airflow/include/artifact/download/csv/"
   dataset_url: "https://www.kaggle.com/api/v1/datasets/download/chethuhn/network-intrusion-dataset"
-  raw_path: "artifact/data/raw"
+  raw_path: "/usr/local/airflow/include/artifact/data/raw"
   file_name: "rawdata.csv"
-  processed_path: "artifact/data/processed/"
+  processed_path: "/usr/local/airflow/include/artifact/data/processed/"
 
 data_transform:
   file_path: "artifact/data/processed/"

@@ -5,3 +5,4 @@ artifact/models/
 artifact/transformedmodels/
 .env
 airflowenv/
+include/
