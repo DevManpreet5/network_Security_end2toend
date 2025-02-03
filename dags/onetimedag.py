@@ -23,25 +23,25 @@ with DAG(
         pipeline = DataIngestionPipeline()
         pipeline.run()
 
-    @task
-    def transform_data():
-        config = load_config("config.yaml")
-        train_csv_path = os.path.join(config["data_transform"]["file_path"], "train.csv")
-        test_csv_path = os.path.join(config["data_transform"]["file_path"], "test.csv")
-        pipeline = DataTransformPipeline()
-        pipeline.run(train_csv_path, test_csv_path)
+    # @task(do_xcom_push=False)
+    # def transform_data():
+    #     config = load_config("config.yaml")
+    #     train_csv_path = os.path.join(config["data_transform"]["file_path"], "train.csv")
+    #     test_csv_path = os.path.join(config["data_transform"]["file_path"], "test.csv")
+    #     pipeline = DataTransformPipeline()
+    #     pipeline.run(train_csv_path, test_csv_path)
 
-    @task
-    def train_model():
-        pipeline = ModelTrainingPipeline()
-        pipeline.run()
+    # @task
+    # def train_model():
+    #     pipeline = ModelTrainingPipeline()
+    #     pipeline.run()
 
-    @task
-    def evaluate_model():
-        pipeline = ModelEvaluatingPipeline()
-        pipeline.run()
+    # @task
+    # def evaluate_model():
+    #     pipeline = ModelEvaluatingPipeline()
+    #     pipeline.run()
     ingest = ingest_data()
-    transform = transform_data()
-    train = train_model()
-    evaluate = evaluate_model()
-    ingest >> transform >> train >> evaluate
+    # transform = transform_data()
+    # train = train_model()
+    #evaluate = evaluate_model()
+    # ingest >> transform >> train >> evaluate
