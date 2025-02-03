@@ -4,28 +4,23 @@ from airflow.operators.python import PythonOperator
 from datetime import datetime
 import os
 import requests
+FOLDER_NAME = os.path.join("/usr/local/airflow/include", "downloadsdags")
+#/usr/local/airflow/dags/downloadsdags/nasa_apod.json
+#FOLDER_NAME = os.path.join("include", "downloadsdags")
+FILE_URL = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY" 
+SAVE_PATH = os.path.join(FOLDER_NAME, "nasa_apod.json")
 
-# Define folder path
-FOLDER_NAME = "downloads"
-
-
-
-os.makedirs(FOLDER_NAME)
-FILE_URL = "https://api.nasa.gov/planetary/apod?api_key=TLnQfhbikfGL2U1eL6NM6EiAHm1TUT2DfJF2MU1u"
-SAVE_PATH = os.path.join(FOLDER_NAME, "free-programming-books.md")
-
-# Function to download content
 def download_file():
-    response = requests.get(FILE_URL)
+    os.makedirs(FOLDER_NAME, exist_ok=True) 
     
+    response = requests.get(FILE_URL)
     if response.status_code == 200:
         with open(SAVE_PATH, "wb") as file:
             file.write(response.content)
-        print(f"File downloaded to {SAVE_PATH}")
+        print(f"✅ File successfully downloaded to {SAVE_PATH}")
     else:
-        raise Exception(f"Failed to download file: {response.status_code}")
+        raise Exception(f"❌ Failed to download file: {response.status_code}")
 
-# Define the DAG
 default_args = {
     "owner": "airflow",
     "start_date": datetime(2024, 2, 1),
@@ -35,14 +30,18 @@ default_args = {
 with DAG(
     dag_id="astro_download_dag",
     default_args=default_args,
-    schedule_interval="@daily",  # Runs daily
+    schedule_interval="@daily",  
     catchup=False,
 ) as dag:
 
-    
+    create_folder = BashOperator(
+        task_id="create_folder",
+        bash_command=f"mkdir -p {FOLDER_NAME}",  
+    )
 
     download_task = PythonOperator(
         task_id="download_file",
         python_callable=download_file,
     )
-
+    
+    create_folder >> download_task
