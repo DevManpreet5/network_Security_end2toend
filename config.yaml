@@ -15,13 +15,13 @@ data_transform:
   target_col: "Label"
 
 model_training:
-  transformed_path: "artifact/data/transformed/"
+  transformed_path: "/usr/local/airflow/include/artifact/data/transformed/"
   target_col: "Label"
-  model_path: "artifact/models/"
+  model_path: "/usr/local/airflow/include/artifact/models/"
 
 model_evaluating:
-  test_dir: "artifact/data/transformed/test_transformed.csv"
-  model_path: "artifact/models"
+  test_dir: "/usr/local/airflow/include/artifact/data/transformed/test_transformed.csv"
+  model_path: "/usr/local/airflow/include/artifact/models"
   model_name: "best_model.pkl"
   metrics_file: "metrics.json"
   tracking_uri: "https://dagshub.com/DevManpreet5/network_Security_end2toend.mlflow"
