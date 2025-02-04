@@ -44,8 +44,9 @@ with DAG(
     # def evaluate_model():
     #     pipeline = ModelEvaluatingPipeline()
     #     pipeline.run()
-    # ingest = ingest_data()
+    ingest = ingest_data()
     transform = transform_data()
     # train = train_model()
     #evaluate = evaluate_model()
-    # ingest >> transform >> train >> evaluate
+    ingest >> transform 
+    

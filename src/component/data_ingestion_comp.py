@@ -59,22 +59,46 @@ class DataIngestionComponent:
         print('csv saved successfully!')
     
     def split(self):
-        self.savecsv()
-        csv_path=os.path.join(self.config.raw_path,self.config.file_name)
-        df=pd.read_csv(csv_path)
-        X = df.drop(columns=['Label'])
-        y=df['Label']
-        X_build,X_eval,y_build,y_eval=train_test_split(X,y,test_size=self.config.evaluate_size,random_state=self.config.random_state,stratify=y)
-        X_train,X_test,y_train,y_test=train_test_split(X_build,y_build,test_size=self.config.test_size,random_state=self.config.random_state,stratify=y_build)
+        self.savecsv()  
+        
+        csv_path = os.path.join(self.config.raw_path, self.config.file_name)
+        
+        
+        chunk_size = 100000  
+        
+        train_df = pd.DataFrame()
+        test_df = pd.DataFrame()
+        eval_df = pd.DataFrame()
 
-        train_df = X_train.copy()
-        train_df['Label'] = y_train
+        chunks = pd.read_csv(csv_path, chunksize=chunk_size)
 
-        test_df = X_test.copy()
-        test_df['Label'] = y_test
+        for chunk in chunks:
+            
+            X = chunk.drop(columns=['Label'])
+            y = chunk['Label']
+            
+    
+            X_build, X_eval, y_build, y_eval = train_test_split(
+                X, y, test_size=self.config.evaluate_size, random_state=self.config.random_state, stratify=y
+            )
+            X_train, X_test, y_train, y_test = train_test_split(
+                X_build, y_build, test_size=self.config.test_size, random_state=self.config.random_state, stratify=y_build
+            )
+            
+        
+            chunk_train_df = X_train.copy()
+            chunk_train_df['Label'] = y_train
 
-        eval_df = X_eval.copy()
-        eval_df['Label'] = y_eval
+            chunk_test_df = X_test.copy()
+            chunk_test_df['Label'] = y_test
+
+            chunk_eval_df = X_eval.copy()
+            chunk_eval_df['Label'] = y_eval
+
+
+            train_df = pd.concat([train_df, chunk_train_df], ignore_index=True)
+            test_df = pd.concat([test_df, chunk_test_df], ignore_index=True)
+            eval_df = pd.concat([eval_df, chunk_eval_df], ignore_index=True)
 
 
         os.makedirs(self.config.processed_path, exist_ok=True)
