@@ -36,10 +36,20 @@ class DataIngestionComponent:
         self.unzip()
         directory_path = self.extract_path
         csv_files = [file for file in os.listdir(directory_path) if file.endswith(".csv")]
-        df_list = [pd.read_csv(os.path.join(directory_path, file)) for file in csv_files]
+        chunk_size = 10000
+        df_list = []
+        i=1
+        for file in csv_files:
+            file_path = os.path.join(directory_path, file)
+            chunks = pd.read_csv(file_path, chunksize=chunk_size)  
+            df_list.extend(chunks) 
+            print(f'chunk {i} done')
+            i=i+1
+
         self.combined_df = pd.concat(df_list, ignore_index=True)
         self.combined_df.columns = self.combined_df.columns.str.strip()
         print('df merged successfully!')
+
     
     def savecsv(self):
         self.combine()
@@ -78,9 +88,3 @@ class DataIngestionComponent:
 
     def run(self):
         self.split()
-
-
-
-
-
-

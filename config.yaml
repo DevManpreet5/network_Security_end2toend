@@ -8,9 +8,9 @@ data_ingestion:
   processed_path: "/usr/local/airflow/include/artifact/data/processed/"
 
 data_transform:
-  file_path: "artifact/data/processed/"
-  transformed_path: "artifact/data/transformed/"
-  model_path: "artifact/transformedmodels"
+  file_path: "/usr/local/airflow/include/artifact/data/processed/"
+  transformed_path: "/usr/local/airflow/include/artifact/data/transformed/"
+  model_path: "/usr/local/airflow/include/artifact/transformedmodels"
   features_pkl_name: "selected_features.pkl"
   target_col: "Label"
 
