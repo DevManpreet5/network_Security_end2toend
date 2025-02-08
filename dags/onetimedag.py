@@ -17,7 +17,7 @@ with DAG(
     start_date=datetime(2025, 1, 31),
     schedule_interval=None,
     default_args={
-        "execution_timeout": timedelta(minutes=800),  
+        "execution_timeout": timedelta(minutes=8004),  
     },
     catchup=False,
 ) as dag:
