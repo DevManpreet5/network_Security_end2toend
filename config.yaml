@@ -26,3 +26,9 @@ model_evaluating:
   metrics_file: "metrics.json"
   tracking_uri: "https://dagshub.com/DevManpreet5/network_Security_end2toend.mlflow"
   target_col: "Label"
+
+report_generation:
+  train_dir: "/Users/s/Desktop/mlops/network_Security_end2end/include/artifact/data/processed/train.csv"
+  eval_dir: "/Users/s/Desktop/mlops/network_Security_end2end/include/artifact/data/processed/eval.csv"
+  eval_size: 10
+  report_path: "/Users/s/Desktop/mlops/network_Security_end2end/include/reports/"
