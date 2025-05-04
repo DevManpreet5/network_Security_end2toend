@@ -1,8 +1,4 @@
-# network_Security_end2toend
-
-# network_Security_end2toend
-
-# CyberFlow 🚀
+# CyberFlow
 
 An end-to-end **MLOps pipeline for network intrusion detection** using **Airflow, Docker, and MLflow**. CyberFlow automates **data ingestion, drift detection, A/B model testing, and deployment**, ensuring real-time monitoring and high accuracy.
 
