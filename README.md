@@ -32,6 +32,8 @@ An end-to-end **MLOps pipeline for network intrusion detection** using **Airflow
 
 ![Airflow DAG Running 2](result_images_readme/Screenshot%202025-02-04%20at%208.51.58%E2%80%AFpm.png)
 
+![MLFlow UI](result_images_readme/Screenshot 2025-04-27 at 9.30.20 pm.png)
+
 ## Tech Stack
 
 - **Python**
